@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane prefHeight="480" prefWidth="750" fx:controller="controller.Controller"
+	xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<ListView fx:id="networkListView" layoutX="15" layoutY="14"
+			prefHeight="86" prefWidth="462">
+			<items>
+				<FXCollections fx:factory="observableArrayList"/>
+			</items>
+		</ListView>
+		<Button fx:id="pickButton" onAction="#networkPickAction" layoutX="395" layoutY="112"
+			prefHeight="29" prefWidth="82" text="Choose">
+		</Button>
+		<TextArea fx:id="textArea" editable="false" layoutX="15" layoutY="156"
+			prefHeight="325" prefWidth="462">
+		</TextArea>
+		<Label layoutX="486" layoutY="14" text="MyIp">
+			<font>
+				<Font size="15"/>
+			</font>
+		</Label>
+		<Label layoutX="486" layoutY="44" text="SenderIp">
+			<font>
+				<Font size="15"/>
+			</font>
+		</Label>
+		<Label layoutX="486" layoutY="75" text="targetIp">
+			<font>
+				<Font size="15"/>
+			</font>
+		</Label>
+		<TextField fx:id="myIp" layoutX="562" layoutY="12" prefHeight="23" prefWidth="175"/>
+		<TextField fx:id="senderIp" layoutX="562" layoutY="44" prefHeight="23" prefWidth="175"/>
+		<TextField fx:id="targetIp" layoutX="562" layoutY="76" prefHeight="23" prefWidth="175"/>
+		<Button fx:id="getMacButton" onAction="#getMacAction" layoutX="654" layoutY="112"
+			prefHeight="29" prefWidth="82" text="Start">
+		</Button>
+	</children>
+	
+</AnchorPane>
+
